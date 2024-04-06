@@ -76,10 +76,12 @@ const Auth = function (props) {
             }
 
             navigate('/');
+            changeAuthMode();
 
         } catch (error) {
             console.error('Register error:', error);
         }
+
     }
 
     if (authMode === "signin") {
