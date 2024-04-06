@@ -1,38 +1,57 @@
+import React, {lazy, Suspense, useEffect, useState} from 'react';
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navb from './components/Navbar/Navbar.jsx';
-import Auth from './components/Auth/Auth.jsx';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-function Home() {
-    return (
-        <div style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center", // Add this line to hide vertical scroll
-        }}>
-            <div className='main'>
-                <div className='text'>
-                    <h1>Tweeb</h1>
-                    <p style={{ fontWeight: "lighter" }}>An open-source front to job postings on Twitter</p>
-                </div>
-                <div className='form'>
-                    {
-                        <Auth />
-                    }
-                </div>
-            </div>
-        </div>
-    );
-}
+import {Logout} from './components/logout.jsx';
+
+const Home = lazy(() => import('./pages/Home/Home.jsx'));
+const Posts = lazy(() => import('./pages/Posts/Posts.jsx'));
 
 function App() {
-    return (
-        <div>
-            <Home />
-        </div>
-    );
+    // const [message, setMessage] = useState('');
+    // useEffect(() => {
+    //     if (localStorage.getItem('access_token') === null) {
+    //         window.location.href = '/login'
+    //     } else {
+    //         (async () => {
+    //             try {
+    //                 const {data} = await axios.get(
+    //                     'http://localhost:8000/home/', {
+    //                         headers: {
+    //                             'Content-Type': 'application/json'
+    //                         }
+    //                     }
+    //                 );
+    //                 setMessage(data.message);
+    //             } catch (e) {
+    //                 console.log('not auth')
+    //             }
+    //         })()
+    //     }
+    //     ;
+    // }, []);
+
+    return (<BrowserRouter>
+        <Routes>
+            <Route
+                path="/"
+                element={<Suspense fallback={<div>Loading...</div>}>
+                    <Home/>
+                </Suspense>}
+            />
+            <Route path="/posts" element={<Suspense fallback={<div>Loading...</div>}>
+                <Posts/>
+            </Suspense>}
+            />
+            <Route
+                path="/logout"
+                element={<Logout/>}
+            />
+        </Routes>
+    </BrowserRouter>);
 }
+
 
 export default App;

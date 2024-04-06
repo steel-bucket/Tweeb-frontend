@@ -1,0 +1,39 @@
+
+    // const navigate = useNavigate();
+    //
+    //
+    // const submit = async (e) => {
+    //     e.preventDefault();
+    //
+    //     const user = {
+    //         username, password,
+    //     };
+    //
+    //     try {
+    //         const response = await fetch('http://127.0.0.0:8000/api/token/', {
+    //             method: 'POST', headers: {
+    //                 'Content-Type': 'application/json',
+    //             }, body: JSON.stringify(user), credentials: 'include',
+    //         });
+    //
+    //         if (!response.ok) {
+    //             throw new Error(`Login failed with status: ${response.status}`);
+    //         }
+    //
+    //         const data = await response.json();
+    //         if (!response.ok) {
+    //             throw new Error(`Login failed with status: ${response.status}`);
+    //         }
+    //
+    //         localStorage.clear();
+    //         localStorage.setItem('access_token', data.access);
+    //         localStorage.setItem('refresh_token', data.refresh);
+    //
+    //         axios.defaults.headers.common['Authorization'] = `Bearer ${data.access}`;
+    //
+    //         window.location.href = '/posts';
+    //         navigate('/posts');
+    //     } catch (error) {
+    //         console.error('Login error:', error);
+    //     }
+    // };
