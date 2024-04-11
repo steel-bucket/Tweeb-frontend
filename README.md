@@ -1,4 +1,4 @@
-# React + Vite
+# Tweeb-Frontend
 
 This Repository Contains the front end part of the project Tweeb.
 
@@ -33,7 +33,12 @@ Visit `http://localhost:5173` in your browser to access Tweeb
 
 ## Setting up a Dev Envionment with your own implementation of Tweeb-API 
 Coming Soon.....
-
+## Technologies
+- React JS
+- react-router-dom
+- react-bootstrap
+- axios
+- Tweeb-API
 ## Features
 - Clean and Simple UI in Bootstrap
 - Atomic and Feature Based Structure
