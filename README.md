@@ -1,8 +1,40 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Repository Contains the front end part of the project Tweeb.
 
-Currently, two official plugins are available:
+Welcome to Tweeb, a open source front to job openings on twitter. Tired of Searching for job openings on twitter, and then suddenly your page refreshes, and you have to scroll wayyyyyyy down to get to where you originally where? 
+Well, tweeb is a solution for that.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Test Login
+- email: testuser@testuser.com
+- password: 123456789
+
+## Setting up a Dev Envionment
+### Prerequisites
+Node.js installed on your machine
+
+__Clone the Repository__
+
+```
+git clone https://github.com/steel-bucket/Tweeb-frontend
+```
+
+__Navigate to the Project Directory__
+
+```
+cd Tweeb-frontend
+```
+__Install Dependencies and Run__
+```
+npm install
+npm run dev
+```
+## Setting up a Dev Envionment with your own implementation of Tweeb-API 
+Coming Soon.....
+Visit `http://localhost:5173` in your browser to access Tweeb
+
+## Features
+- Clean and Simple UI in Bootstrap
+- Atomic and Feature Based Structure
+## Contibruting
+- Contributing is encouraged
