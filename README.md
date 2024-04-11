@@ -29,9 +29,10 @@ __Install Dependencies and Run__
 npm install
 npm run dev
 ```
+Visit `http://localhost:5173` in your browser to access Tweeb
+
 ## Setting up a Dev Envionment with your own implementation of Tweeb-API 
 Coming Soon.....
-Visit `http://localhost:5173` in your browser to access Tweeb
 
 ## Features
 - Clean and Simple UI in Bootstrap
