@@ -1,14 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import {FormControl} from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {useState} from "react";
+import { useState } from "react";
 
 function Navb(props) {
     const search = (e) => {
-        props.setFilters({s: e, page: 1});
+        props.setFilters({ s: e, page: 1 });
     }
     console.log("this is posts")
     console.log(props.posts);
@@ -33,23 +33,16 @@ function Navb(props) {
 
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
+        <Navbar expand="lg" className="bg-dark-navy-blue" data-bs-theme="dark" style={{ borderColor: 'blue' }}>
             <Container fluid>
-                <Navbar.Toggle aria-controls="navbarScroll"/>
+                <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        style={{maxHeight: '100px'}}
-                        navbarScroll
                     >
                         <Nav.Link href="#action1">About Us</Nav.Link>
                         <Nav.Link href="#action2">Contact</Nav.Link>
                     </Nav>
-                    <Nav className="ms-auto my-2 my-lg-0" style={{maxHeight: '100px'}}
-                         navbarScroll>  {/* Class changed to ms-auto */}
-                        <Nav.Link href="/logout">Logout</Nav.Link>
-                    </Nav>
-
                     <Form className="d-flex">
                         <FormControl
                             type="search"
@@ -59,12 +52,16 @@ function Navb(props) {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             onKeyUp={handleKeyUp}
+                            style={{ backgroundColor: '#00388B' }} 
                         />
                         <Button variant="outline-success" onClick={handleSearch} disabled={!searchTerm}>
                             Search
                         </Button>
                     </Form>
-
+                    <Nav className="ms-auto my-2 my-lg-0" style={{ maxHeight: '100px' }}
+                        navbarScroll>  {/* Class changed to ms-auto */}
+                        <Nav.Link href="/logout">Logout</Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

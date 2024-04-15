@@ -5,12 +5,30 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #000000;
+  background-color: #001a75;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #8cbbf0";
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #7cb9ff";
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #79b8ff";
+  }
+
 }
 
 
@@ -18,4 +36,5 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+
 }
